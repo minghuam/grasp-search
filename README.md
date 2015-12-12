@@ -1,3 +1,10 @@
+![Car](https://github.com/minghuam/grasp-search/blob/master/doc/car.png)
+
+![Airplane](https://github.com/minghuam/grasp-search/blob/master/doc/airplane.png)
+
+![Horse](https://github.com/minghuam/grasp-search/blob/master/doc/horse.png)
+
+
 ### Compile original Graspit code
 Download version 2.2 from [here](http://sourceforge.net/projects/graspit/) and follow the manual to install dependencies.
 
@@ -74,12 +81,6 @@ Download version 2.2 from [here](http://sourceforge.net/projects/graspit/) and f
     Ignore `...$libdir/cube$...` errors and warnings for now.
 
 3. Setup environtment variables: `GRASPIT` and `CGDB_MODEL_ROOT`.
-
-![Car](https://github.com/minghuam/grasp-search/blob/master/doc/car.png)
-
-![Airplane](https://github.com/minghuam/grasp-search/blob/master/doc/airplane.png)
-
-![Horse](https://github.com/minghuam/grasp-search/blob/master/doc/horse.png)
 
 
 
