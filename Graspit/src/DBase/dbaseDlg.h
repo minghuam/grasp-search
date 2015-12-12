@@ -141,6 +141,6 @@ public slots:
 	//! Trigger events
 	void modelChanged();
 	void graspTypeChanged();
-	void classChanged();
+    void classChanged();
 };
 #endif

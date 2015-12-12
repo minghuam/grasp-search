@@ -152,9 +152,16 @@ void DBaseDlg::renderButton_clicked(){
 
 
     Hand *hand = graspItGUI->getIVmgr()->getWorld()->getCurrentHand();
-    Body *body = mCurrentLoadedModel->getGraspableBody();
-    Render2D win(this, hand, body);
-    win.exec();
+    GraspableBody *body = mCurrentLoadedModel->getGraspableBody();
+
+    Render2D *win = new Render2D(this, hand, body, this->renderPathEdit->text());
+
+
+    //win->setAttribute(Qt::WA_ShowModal, false);
+    //win->setAttribute(Qt::WA_DeleteOnClose, true);
+    //win->showMaximized();
+
+    win->exec();
 
     return;
 
@@ -280,6 +287,10 @@ void DBaseDlg::connectButton_clicked()
 	delete mDBMgr;
 	Hand *h = graspItGUI->getIVmgr()->getWorld()->getCurrentHand();
 
+//    databaseLineEdit->setText("cgdb");
+//    usernameLineEdit->setText("postgres");
+//    passwordLineEdit->setText("postgres");
+
 #ifndef ROS_DATABASE_MANAGER	
 	mDBMgr = new db_planner::SqlDatabaseManager(hostLineEdit->text().toStdString(),
 						    atoi(portLineEdit->text().latin1()),
@@ -397,7 +408,7 @@ void DBaseDlg::loadModelButton_clicked(){
 	//this adds the object to the graspit world so that we can see it
 	graspItGUI->getIVmgr()->getWorld()->addBody(model->getGraspableBody());
 	//and remember it
-	mCurrentLoadedModel = model;
+    mCurrentLoadedModel = model;
 	//model->getGraspableBody()->showAxes(false);
 	model->getGraspableBody()->setTransparency(0.0);
         model->getGraspableBody()->setTran(transf::IDENTITY);

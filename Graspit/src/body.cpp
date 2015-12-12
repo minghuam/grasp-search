@@ -590,7 +590,7 @@ Body::addIVMat(bool clone)
 	IVMat->emissiveColor.setIgnored(true);
 	IVMat->shininess.setIgnored(true);
 
-	if (clone) {
+    if (clone) {
 		//clone's IVMat really does nothing except die with the clone
 		IVGeomRoot->addChild(IVMat);		
 	} else {
@@ -601,7 +601,7 @@ Body::addIVMat(bool clone)
 		
 		if (sa->getPaths().getLength() == 0) {
 			IVGeomRoot->insertChild(IVMat,0);
-		} else {
+        } else {
 			for (int i=0; i<sa->getPaths().getLength(); i++) {
 				SoGroup *g = (SoGroup *)sa->getPaths()[i]->getNodeFromTail(1);
 				if (((SoMaterial *)sa->getPaths()[i]->getTail())->transparency[0] == 0.0f) {
