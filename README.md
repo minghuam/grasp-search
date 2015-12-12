@@ -75,11 +75,11 @@ Download version 2.2 from [here](http://sourceforge.net/projects/graspit/) and f
 
 3. Setup environtment variables: `GRASPIT` and `CGDB_MODEL_ROOT`.
 
-![Car](https://github.com/minghuam/grasp-search/doc/car.png)
+![Car](https://github.com/minghuam/grasp-search/blob/master/doc/car.png)
 
-![Airplane](https://github.com/minghuam/grasp-search/doc/airplane.png)
+![Airplane](https://github.com/minghuam/grasp-search/blob/master/doc/airplane.png)
 
-![Horse](https://github.com/minghuam/grasp-search/doc/horse.png)
+![Horse](https://github.com/minghuam/grasp-search/blob/master/doc/horse.png)
 
 
 
